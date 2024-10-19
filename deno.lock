@@ -482,14 +482,19 @@
     }
   },
   "workspace": {
-    "dependencies": [
-      "npm:@sveltejs/adapter-auto@^3.2.5",
-      "npm:@sveltejs/kit@^2.7.1",
-      "npm:@sveltejs/vite-plugin-svelte@^3.1.2",
-      "npm:svelte-check@^4.0.5",
-      "npm:svelte@^4.2.19",
-      "npm:typescript@^5.6.3",
-      "npm:vite@^5.4.9"
-    ]
+    "packageJson": {
+      "dependencies": [
+        "npm:@sveltejs/adapter-auto@^3.2.5",
+        "npm:@sveltejs/kit@^2.7.1",
+        "npm:@sveltejs/vite-plugin-svelte@^3.1.2",
+        "npm:prettier-plugin-svelte@^3.2.7",
+        "npm:prettier@^3.3.3",
+        "npm:sass@^1.80.3",
+        "npm:svelte-check@^4.0.5",
+        "npm:svelte@^4.2.19",
+        "npm:typescript@^5.6.3",
+        "npm:vite@^5.4.9"
+      ]
+    }
   }
 }
