@@ -1,12 +1,13 @@
 :root {
-  --white: #FAF9F7;
-  --black: #1E1E1E;
+  --white: #faf9f7;
+  --black: #1e1e1e;
 
-  --font-primary: "Inter", sans-serif;
+  --font-primary: 'Inter', sans-serif;
   --font-secondary: 'Playfair Display', serif;
 }
 
-html, body {
+html,
+body {
   font-family: var(--font-primary);
   font-optical-sizing: auto;
   font-style: normal;
