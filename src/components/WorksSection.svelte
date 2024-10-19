@@ -67,6 +67,7 @@
   .list {
     display: grid;
     gap: 10px;
+    list-style: none;
     padding: 0;
     padding-bottom: 70px;
   }

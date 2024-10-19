@@ -27,11 +27,6 @@
 </section>
 
 <style lang="scss">
-  .alt-font {
-    font-family: var(--font-secondary);
-    font-style: italic;
-  }
-
   h1 {
     font-weight: 700;
     font-size: 64px;
@@ -39,6 +34,11 @@
     text-align: center;
     letter-spacing: -3px;
     padding-block: 48px;
+  }
+
+  .alt-font {
+    font-family: var(--font-secondary);
+    font-style: italic;
   }
 
   .text {
