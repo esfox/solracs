@@ -38,12 +38,12 @@
       <div>
         humility
         <span class="alt-font">in</span>
-        simplicity
+        simplicity.
       </div>
       <div aria-hidden="true">
         humility
         <span class="alt-font">in</span>
-        simplicity
+        simplicity.
       </div>
     </div>
   </div>
