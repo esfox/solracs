@@ -1,21 +1,5 @@
 <script lang="ts">
-  const works = [
-    {
-      image:
-        'https://fastly.picsum.photos/id/216/1920/1080.jpg?hmac=eRpceR4sD-vJpndVIFqLSdcDyDjiw5UOUznbHS4C2Yo',
-      title: 'Work 1',
-    },
-    {
-      image:
-        'https://fastly.picsum.photos/id/358/1920/1080.jpg?hmac=1FA7Zn5y4_b671yi9SPafeIjAymnftxjw8iqqo2rHik',
-      title: 'Work 2',
-    },
-    {
-      image:
-        'https://fastly.picsum.photos/id/301/1920/1080.jpg?hmac=-h20lEcazeSzwCALlmynk0Tgufw8NUP3OP4Bgz91jSs',
-      title: 'Work 3',
-    },
-  ];
+  import { works } from '../data';
 </script>
 
 <section>
@@ -27,7 +11,7 @@
   <ul class="list">
     {#each works as work}
       <li class="work">
-        <img src={work.image} alt={work.title} />
+        <img src={work.featuredImage} alt={work.title} />
         <h3>{work.title}</h3>
       </li>
     {/each}

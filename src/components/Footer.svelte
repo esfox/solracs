@@ -1,3 +1,7 @@
+<script lang="ts">
+  export let withBackToHome = false;
+</script>
+
 <section>
   <div class="text-content">
     <div>
@@ -7,8 +11,12 @@
     <a href="#top">back to top</a>
   </div>
 
-  <div class="terms">
-    <a href="#">terms and conditions</a>
+  <div class="bottom-link">
+    {#if withBackToHome}
+      <a href="/">back to home</a>
+    {:else}
+      <a href="#">terms and conditions</a>
+    {/if}
   </div>
 </section>
 
@@ -45,7 +53,7 @@
     padding-block: 12px;
   }
 
-  .terms {
+  .bottom-link {
     display: grid;
     place-items: center;
     margin-top: 36px;
