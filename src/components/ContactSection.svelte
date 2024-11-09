@@ -27,10 +27,14 @@
     border: none;
     border-radius: 1000px;
     color: var(--white);
-    font-size: 20px;
+    font-size: 16px;
     text-decoration: none;
     padding-inline: 16px;
     margin-top: 24px;
     cursor: pointer;
+
+    @media (min-width: 480px) {
+      font-size: 20px;
+    }
   }
 </style>
