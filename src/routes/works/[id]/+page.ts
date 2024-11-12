@@ -1,6 +1,12 @@
 import { error } from '@sveltejs/kit';
 import { works } from '../../../data';
-import type { PageLoad } from './$types';
+import type { EntryGenerator, PageLoad } from './$types';
+
+export const entries: EntryGenerator = () => {
+  return works.map((work) => ({ id: work.id.toString() }));
+};
+
+export const prerender = true;
 
 export const load: PageLoad = ({ params }) => {
   const workIndex = works.findIndex((w) => w.id === Number(params.id));
