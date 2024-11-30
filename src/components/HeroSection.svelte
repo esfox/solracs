@@ -1,9 +1,5 @@
 <section>
-  <img
-    src="https://fastly.picsum.photos/id/151/1920/1080.jpg?hmac=CZiGkkZt5j1ZobW0BJfRfZdVQl250S_ia7gsV0X5mEg"
-    alt="hero"
-    class="bg-img"
-  />
+  <img src="hero.jpeg" alt="hero" class="bg-img" />
   <div class="headings">
     <h1>solracs.</h1>
     <h2>multimedia artist</h2>
@@ -20,6 +16,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     z-index: -1;
@@ -28,10 +25,14 @@
   .headings {
     width: 100%;
     position: absolute;
-    bottom: 0;
+    top: 72px;
     text-align: center;
-    color: var(--white);
-    padding-bottom: 72px;
+    color: var(--black);
+
+    @media (min-width: 1024px) {
+      left: 72px;
+      text-align: start;
+    }
 
     h1 {
       font-size: 64px;

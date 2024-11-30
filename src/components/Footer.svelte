@@ -11,11 +11,11 @@
     <a href="#top">back to top</a>
   </div>
 
-  <div class="bottom-link">
+  <div class="terms-link-bottom">
     {#if withBackToHome}
       <a href="/">back to home</a>
     {:else}
-      <a href="#">terms and conditions</a>
+      <a href="#">terms & conditions</a>
     {/if}
   </div>
 </section>
@@ -53,13 +53,19 @@
     padding-block: 12px;
   }
 
-  .bottom-link {
+  .terms-link-bottom {
     display: grid;
     place-items: center;
     margin-top: 36px;
 
     a {
       padding: 12px;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .terms-link-bottom {
+      margin-top: -46px;
     }
   }
 </style>

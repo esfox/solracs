@@ -11,7 +11,9 @@
   <ul class="list">
     {#each works as work}
       <li class="work">
-        <img src={work.featuredImage} alt={work.title} />
+        <div class="bg-container">
+          <img src={work.featuredImage} alt={work.title} />
+        </div>
         <h3>{work.title}</h3>
       </li>
     {/each}
@@ -24,6 +26,7 @@
         <span class="alt-font">in</span>
         simplicity.
       </div>
+
       <div aria-hidden="true">
         humility
         <span class="alt-font">in</span>
@@ -57,25 +60,49 @@
   }
 
   .work {
+    display: grid;
+    place-items: center;
     position: relative;
+    width: 100%;
     height: 280px;
 
-    img {
+    .bg-container {
       position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      z-index: -1;
-      filter: brightness(0.5);
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        filter: brightness(0.5);
+        transition:
+          filter 150ms ease-in-out,
+          transform 150ms ease-in-out;
+      }
     }
 
     h3 {
-      width: 100%;
-      position: absolute;
-      bottom: 0;
-      text-align: center;
+      font-size: 36px;
       padding-block: 18px;
       color: var(--white);
+      z-index: 1;
+      transition: font-size 150ms ease-in-out;
+    }
+
+    &:hover {
+      h3 {
+        font-size: 38px;
+      }
+
+      img {
+        filter: brightness(0.65);
+        transform: scale(1.05);
+      }
     }
   }
 
@@ -111,6 +138,32 @@
     }
     to {
       transform: translateX(-50%);
+    }
+  }
+
+  @media (min-width: 480px) {
+    h1 p {
+      display: inline;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .list {
+      gap: 48px;
+    }
+
+    .work {
+      height: 480px;
+
+      h3 {
+        font-size: 48px;
+      }
+
+      &:hover {
+        h3 {
+          font-size: 52px;
+        }
+      }
     }
   }
 </style>
