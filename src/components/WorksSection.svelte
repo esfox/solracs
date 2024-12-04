@@ -1,5 +1,8 @@
 <script lang="ts">
-  import { works } from '../data';
+  import LinkSectionWithBg from './LinkSectionWithBg.svelte';
+  import { workTypes } from '../data';
+
+  const workTypesArray = Object.values(workTypes);
 </script>
 
 <section>
@@ -9,12 +12,14 @@
   </h1>
 
   <ul class="list">
-    {#each works as work}
-      <li class="work">
-        <div class="bg-container">
-          <img src={work.featuredImage} alt={work.title} />
-        </div>
-        <h3>{work.title}</h3>
+    {#each workTypesArray as workType}
+      <li>
+        <LinkSectionWithBg
+          href={`/${workType.slug}`}
+          bgImageSrc={workType.featuredImage}
+          bgImageAlt={workType.label}
+          label={workType.label}
+        />
       </li>
     {/each}
   </ul>
@@ -57,53 +62,6 @@
     list-style: none;
     padding: 0;
     padding-bottom: 70px;
-  }
-
-  .work {
-    display: grid;
-    place-items: center;
-    position: relative;
-    width: 100%;
-    height: 280px;
-
-    .bg-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-        filter: brightness(0.5);
-        transition:
-          filter 150ms ease-in-out,
-          transform 150ms ease-in-out;
-      }
-    }
-
-    h3 {
-      font-size: 36px;
-      padding-block: 18px;
-      color: var(--white);
-      z-index: 1;
-      transition: font-size 150ms ease-in-out;
-    }
-
-    &:hover {
-      h3 {
-        font-size: 38px;
-      }
-
-      img {
-        filter: brightness(0.65);
-        transform: scale(1.05);
-      }
-    }
   }
 
   .marquee {
@@ -150,20 +108,6 @@
   @media (min-width: 768px) {
     .list {
       gap: 48px;
-    }
-
-    .work {
-      height: 480px;
-
-      h3 {
-        font-size: 48px;
-      }
-
-      &:hover {
-        h3 {
-          font-size: 52px;
-        }
-      }
     }
   }
 </style>

@@ -2,7 +2,6 @@
   import type { PageData } from './$types';
   import ArrowDown from '$lib/assets/icons/arrow-down.svg?raw';
   import Expand from '$lib/assets/icons/expand.svg?raw';
-  import Footer from '../../../components/Footer.svelte';
   import Button from '../../../components/Button.svelte';
 
   export let data: PageData;
@@ -26,7 +25,7 @@
 <section id="details">
   <div class="heading">
     <h1>{work.title}</h1>
-    <h2>{work.type}</h2>
+    <h2>{work.type.label}</h2>
   </div>
 
   <p>{work.description}</p>
@@ -45,15 +44,14 @@
 
 <section class="next">
   <img src={nextWork.featuredImage} alt={nextWork.title} />
-  <Button href={`/works/${nextWork.id}`} class="next-project">next project</Button>
+  <Button href={`/works/${nextWork.slug}`} class="next-project">next project</Button>
 </section>
-
-<Footer withBackToHome />
 
 <style lang="scss">
   .hero {
     display: grid;
     place-items: center;
+    position: relative;
 
     img {
       width: 100%;
@@ -67,8 +65,6 @@
       font-size: 40px;
       font-weight: 700;
       letter-spacing: -0.05em;
-      mix-blend-mode: difference;
-      color: var(--white);
     }
 
     :global(.arrow-down) {
@@ -96,8 +92,8 @@
     padding-inline: 16px;
 
     .heading {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-wrap: wrap;
 
       h1 {
         font-size: 64px;
@@ -106,11 +102,13 @@
       }
 
       h2 {
+        flex-grow: 1;
         display: grid;
         place-items: end end;
         font-family: var(--font-secondary);
         text-transform: lowercase;
         letter-spacing: -0.05em;
+        margin-top: 4px;
       }
     }
 
@@ -167,6 +165,14 @@
       font-size: 24px;
       z-index: 2;
       letter-spacing: -0.05em;
+    }
+  }
+
+  @media (min-width: 768px) {
+    #details {
+      h2 {
+        margin-top: 0;
+      }
     }
   }
 </style>

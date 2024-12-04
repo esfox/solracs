@@ -3,13 +3,13 @@ import { works } from '../../../data';
 import type { EntryGenerator, PageLoad } from './$types';
 
 export const entries: EntryGenerator = () => {
-  return works.map((work) => ({ id: work.id.toString() }));
+  return works.map((work) => ({ slug: work.slug }));
 };
 
 export const prerender = true;
 
 export const load: PageLoad = ({ params }) => {
-  const workIndex = works.findIndex((w) => w.id === Number(params.id));
+  const workIndex = works.findIndex((work) => work.slug === params.slug);
   const work = works[workIndex];
   if (!work) {
     error(404);

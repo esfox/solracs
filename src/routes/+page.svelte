@@ -4,7 +4,6 @@
   import AboutSection from '../components/AboutSection.svelte';
   import ServicesSection from '../components/ServicesSection.svelte';
   import ContactSection from '../components/ContactSection.svelte';
-  import Footer from '../components/Footer.svelte';
   import Divider from '../components/Divider.svelte';
 </script>
 
@@ -17,7 +16,6 @@
 <ServicesSection />
 <Divider class="services-contact-divider" />
 <ContactSection />
-<Footer />
 
 <style lang="scss">
   :global(.about-services-divider) {
