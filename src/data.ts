@@ -43,17 +43,17 @@ export const works = [
       'https://fastly.picsum.photos/id/178/1920/1080.jpg?hmac=5j-Pqc6_zieQ7ow1Cqnxhyb3CjqwzGj32Spn9ripOPk',
     ],
   },
-  {
-    slug: 'sandbox',
-    featuredImage: '/sandbox-bg.png',
-    title: 'Sandbox',
-    type: workTypes.sandbox,
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus efficitur dapibus vestibulum. Phasellus elementum nisl eu quam pellentesque elementum. Ut placerat auctor porttitor. Donec placerat sem neque, congue aliquet elit pulvinar ut. Cras imperdiet lectus nec tortor laoreet, sit amet egestas metus condimentum.\n\nMauris neque justo, interdum ut massa laoreet, ullamcorper scelerisque urna. Ut consectetur, nisi ac consectetur rutrum, libero lorem sagittis orci, ut vehicula neque mi eu dui.',
-    images: [
-      'https://fastly.picsum.photos/id/301/1920/1080.jpg?hmac=-h20lEcazeSzwCALlmynk0Tgufw8NUP3OP4Bgz91jSs',
-      'https://fastly.picsum.photos/id/774/1920/1080.jpg?hmac=fNc6p6L2yaXaNKdG4V3n7Icr0-Jk65TIYSPeH8v8JeI',
-      'https://fastly.picsum.photos/id/851/1920/1080.jpg?hmac=8dpXaXykD3QOXMLOFPAMyWGveKGA1pbxbw1PxSZgaX0',
-    ],
-  },
+  // {
+  //   slug: 'sandbox',
+  //   featuredImage: '/sandbox-bg.png',
+  //   title: 'Sandbox',
+  //   type: workTypes.sandbox,
+  //   description:
+  //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus efficitur dapibus vestibulum. Phasellus elementum nisl eu quam pellentesque elementum. Ut placerat auctor porttitor. Donec placerat sem neque, congue aliquet elit pulvinar ut. Cras imperdiet lectus nec tortor laoreet, sit amet egestas metus condimentum.\n\nMauris neque justo, interdum ut massa laoreet, ullamcorper scelerisque urna. Ut consectetur, nisi ac consectetur rutrum, libero lorem sagittis orci, ut vehicula neque mi eu dui.',
+  //   images: [
+  //     'https://fastly.picsum.photos/id/301/1920/1080.jpg?hmac=-h20lEcazeSzwCALlmynk0Tgufw8NUP3OP4Bgz91jSs',
+  //     'https://fastly.picsum.photos/id/774/1920/1080.jpg?hmac=fNc6p6L2yaXaNKdG4V3n7Icr0-Jk65TIYSPeH8v8JeI',
+  //     'https://fastly.picsum.photos/id/851/1920/1080.jpg?hmac=8dpXaXykD3QOXMLOFPAMyWGveKGA1pbxbw1PxSZgaX0',
+  //   ],
+  // },
 ];

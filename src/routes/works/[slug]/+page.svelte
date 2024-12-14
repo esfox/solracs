@@ -3,10 +3,35 @@
   import ArrowDown from '$lib/assets/icons/arrow-down.svg?raw';
   import Expand from '$lib/assets/icons/expand.svg?raw';
   import Button from '../../../components/Button.svelte';
+  // import PhotoSwipeLightbox from 'photoswipe/lightbox';
+  import 'photoswipe/photoswipe.css';
+  import { onMount } from 'svelte';
 
   export let data: PageData;
   $: work = data.work;
   $: nextWork = data.nextWork;
+
+  onMount(() => {
+    //     const gallery = new PhotoSwipeLightbox({
+    //       gallery: '#media',
+    //       children: 'a',
+    //       pswpModule: () => import('photoswipe'),
+    //     });
+    //
+    //     gallery.on("gettingData", (index: number, item) => {
+    // if (item.w < 1 || item.h < 1) { // unknown size
+    //         var img = new Image();
+    //         img.onload = function() { // will get size after load
+    //         item.h = this.height; // set image height
+    //            gallery.up
+    //         }
+    //     img.src = item.src; // let's download image
+    //     }
+    //
+    //     })
+    //
+    //     gallery.init();
+  });
 </script>
 
 <section class="hero">
@@ -31,14 +56,14 @@
     <p>{work.description}</p>
   </section>
 
-  <section class="media">
+  <section id="media" class="media">
     {#each work.images as image}
-      <div>
+      <a href={image} data-pswp-width="0" data-pswp-height="0" target="_blank">
         <img src={image} alt={work.title} />
         <Button class="expand" icon>
           {@html Expand}
         </Button>
-      </div>
+      </a>
     {/each}
   </section>
 
@@ -47,6 +72,8 @@
     <Button href={`/works/${nextWork.slug}`} class="next-project">next project</Button>
   </section>
 </div>
+
+<!-- <Lightbox bind:this={lightbox}>hello there</Lightbox> -->
 
 <style lang="scss">
   .hero {
@@ -149,7 +176,7 @@
     display: grid;
     gap: 20px;
 
-    > div {
+    > a {
       position: relative;
       display: grid;
       place-items: end end;
@@ -157,6 +184,7 @@
       img {
         width: 100%;
         cursor: pointer;
+        object-fit: cover;
       }
 
       :global(.expand) {
