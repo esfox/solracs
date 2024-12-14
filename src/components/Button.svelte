@@ -4,9 +4,18 @@
   export { className as class };
   export let href: string | undefined = undefined;
   export let icon = false;
+  export let onClick = () => {};
 </script>
 
-<svelte:element this={href ? 'a' : 'button'} class={className} href={href || undefined} class:icon>
+<svelte:element
+  this={href ? 'a' : 'button'}
+  class={className}
+  href={href || undefined}
+  class:icon
+  on:click={onClick}
+  role="button"
+  tabindex="-1"
+>
   <slot />
 </svelte:element>
 
@@ -32,13 +41,13 @@
     &.icon {
       width: 48px;
       height: 48px;
-      background: color-mix(in srgb, var(--black) 50%, transparent);
+      background: color-mix(in srgb, var(--white) 15%, transparent);
       border-radius: 1000px;
       border: 0;
       padding: 12px;
 
       &:hover {
-        background: var(--black);
+        background: color-mix(in srgb, var(--white) 30%, transparent);
       }
     }
   }

@@ -17,4 +17,5 @@ body {
   letter-spacing: -0.5px;
   overflow-x: hidden;
   height: 100%;
+  scroll-behavior: smooth;
 }

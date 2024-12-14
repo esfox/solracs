@@ -1,8 +1,8 @@
 <script lang="ts">
   import LinkSectionWithBg from './LinkSectionWithBg.svelte';
-  import { workTypes } from '../data';
+  import { works } from '../data';
 
-  const workTypesArray = Object.values(workTypes);
+  const workTypesArray = works.map((work) => work.type);
 </script>
 
 <section>

@@ -2,7 +2,9 @@
   import LinkSectionWithBg from '../../components/LinkSectionWithBg.svelte';
   import { works, type workTypes } from '../../data';
 
-  export let data: { workType: (typeof workTypes)[keyof typeof workTypes] };
+  type WorkType = typeof workTypes;
+
+  export let data: { workType: WorkType[keyof WorkType] };
   const workType = data.workType;
   const label = workType.label;
   const _works = works.filter((work) => work.type.slug === workType.slug);
