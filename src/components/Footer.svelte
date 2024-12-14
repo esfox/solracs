@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let withBackToHome = false;
+  export let withBackToTop = false;
 </script>
 
 <section>
@@ -8,12 +8,12 @@
       <h2>solracs.</h2>
       <p>humility <span class="alt-font">in</span> simplicity.</p>
     </div>
-    <a href="#top">back to top</a>
+    <a href="/">back to home</a>
   </div>
 
   <div class="terms-link-bottom">
-    {#if withBackToHome}
-      <a href="/">back to home</a>
+    {#if withBackToTop}
+      <a href="#top">back to top</a>
     {:else}
       <a href="#">terms & conditions</a>
     {/if}
