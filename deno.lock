@@ -616,6 +616,8 @@
         "npm:@sveltejs/adapter-static@^3.0.6",
         "npm:@sveltejs/kit@^2.7.1",
         "npm:@sveltejs/vite-plugin-svelte@^3.1.2",
+        "npm:lightgallery@^2.8.2",
+        "npm:photoswipe@^5.4.4",
         "npm:prettier-plugin-svelte@^3.2.7",
         "npm:prettier@^3.3.3",
         "npm:sass@^1.80.3",
